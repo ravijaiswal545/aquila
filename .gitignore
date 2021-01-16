@@ -19,6 +19,7 @@ nb-configuration.xml
 *.log
 npm-debug.log
 node_modules
+assets/node_modules/*
 .DS_Store
 **/.DS_Store
 *.map

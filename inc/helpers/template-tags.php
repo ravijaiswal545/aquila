@@ -78,9 +78,9 @@ function aquila_excerpt_read_more($more = '')
     if (!is_single()) {
         $more = sprintf(
             '
-    <button class="mt-4 btn btn-info">
-    <a class="aquila-read-more text-white" href="%1$s">%2$s
-    </a></button>',
+    
+    <a class="aquila-read-more text-white" href="%1$s"><button class="mt-4 btn btn-info">%2$s
+    </button></a>',
             get_permalink(get_the_ID()),
             __('Read More', 'aquila')
         );

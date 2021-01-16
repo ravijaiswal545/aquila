@@ -9,7 +9,9 @@ get_header();
 <div id="primary">
 
     <main id="main" class="site-main mt-5" role="main">
-        <?php if (have_posts()) : ?>
+       <div class="container">
+       <div class="row">
+           <div class="col-lg-8 col-md-8 col-sm-12"> <?php if (have_posts()) : ?>
             <div class="container">
                 <?php if (is_home() && !is_front_page()) { ?>
                     <header class="mb-5">
@@ -26,14 +28,20 @@ get_header();
 
                 endwhile; ?>
 
-
+<div class="prev-link"><?php previous_post_link(); ?></div>
+            <div class="next-link"><?php next_post_link(); ?></div>
 
             </div>
         <?php else :
             get_template_part('template-parts/content-none');
         endif;
-        aquila_pagination();
-        ?>
+        ?></div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <?php get_sidebar(); ?>
+        </div>
+       </div>
+       </div>
+       
 
     </main>
 </div>
